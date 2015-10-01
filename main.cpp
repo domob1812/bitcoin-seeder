@@ -404,10 +404,12 @@ static const string *seeds = mainnet_seeds;
 static const string initNodes[] = {"dvcstable01.dvcnode.org",
                                    "dvcstable02.dvcnode.org",
                                    "dvcstable06.dvcnode.org",
+                                   "51.254.131.226",
                                    ""};
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
+    db.Add(CService("ybs6nrn4bpvckalt.onion", 7333), true);
     for (int i=0; initNodes[i] != ""; i++) {
       db.Add(CService(initNodes[i], 7333, true), true);
     }
