@@ -363,9 +363,8 @@ static const string testnet_seeds[] = {"dnsseed.test.namecoin.webbtc.com",
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
-  if (!fTestNet){
-    //db.Add(CService("yhn2xokz2rw3757k.onion", 8334), true);
-  }
+  /* Runs both a testnet and mainnet node.  */
+  db.Add(CService("fp7k2dennh52dzql.onion"), true);
   do {
     for (int i=0; seeds[i] != ""; i++) {
       vector<CNetAddr> ips;
