@@ -404,7 +404,7 @@ static const string *seeds = mainnet_seeds;
 static const string initNodes[] = {"dvcstable01.dvcnode.org",
                                    "dvcstable02.dvcnode.org",
                                    "dvcstable06.dvcnode.org",
-                                   "51.254.131.226",
+                                   "51.68.174.164",
                                    ""};
 
 extern "C" void* ThreadSeeder(void*) {
